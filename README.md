@@ -61,15 +61,24 @@ Run the application
 Bash
 
 streamlit run main.py
-📂 File Structure
-Plaintext
+## 📂 File Structure
 
+```text
 sql-server-sentinel/
 ├── main.py                 # App routing & Session State
 ├── db_manager.py           # Connection & Driver Detection
+├── requirements.txt        # Project dependencies
 ├── backend/                # Logic Layer: SQL Query Modules
 │   ├── queries_monitor.py  # Live session & blocking logic
+│   ├── queries_storage.py  # Disk & file growth logic
+│   ├── queries_index.py    # Index fragmentation logic
+│   ├── queries_health.py   # Backup & Job audit logic
+│   ├── queries_logs.py     # Error log auditing logic
 │   └── queries_perf.py     # Plan cache & performance logic
 └── views/                  # UI Layer: Streamlit Views
     ├── view_monitor.py     # Live Monitor UI
-    └── view_logs.py        # Log Analysis UI
+    ├── view_storage.py     # Storage Overview UI
+    ├── view_index.py       # Index Hygiene UI
+    ├── view_health.py      # System Health UI
+    ├── view_logs.py        # Log Analysis UI
+    └── view_perf.py        # Performance History UI
