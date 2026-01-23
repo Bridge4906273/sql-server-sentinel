@@ -43,7 +43,7 @@ This project follows a strict **MVC (Model-View-Controller)** pattern to ensure 
 
 ### 🏠 All-in-One Dashboard
 The main interface features a secure connection portal and a comprehensive overview of all sentinel modules.
-![Dashboard Home](screenshots/welcome_page.png)
+![Dashboard Home](dashboard_home.png)
 
 ---
 
