@@ -1,0 +1,10 @@
+Find the duplicate rows:
+SELECT [Column B], COUNT(*) AS DuplicateCount
+FROM YourTableName
+GROUP BY [Column B]
+HAVING COUNT(*) > 1;
+
+Find the second min:
+SELECT MIN([ColumnName]) AS SecondMin
+FROM YourTableName
+WHERE [ColumnName] > (SELECT MIN([ColumnName]) FROM YourTableName);
